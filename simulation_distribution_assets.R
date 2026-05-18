@@ -83,8 +83,8 @@ rw_cont <- df_all$close
 # binomialize
 rw_binom_asset <-binarize_rolling(rw_cont, window_length = 1000)
 
-numSim <- 40000
-T <- 300
+numSim <- 100000
+T <- 500
 
 J_w_record <- rep(NA, numSim)
 J_w_2_record <- rep(NA, numSim)
@@ -175,7 +175,7 @@ for (w_target in seq(w_start, w_end, length.out = num_graphs)   ){
 }
 
 
-pdf(paste0("C:/Users/CONS_LGA/Dropbox/habilitacja_gatarek_welfe/chapmann_kolmogorov/paper/graphs_distribution/", symbol, ".pdf"),
+pdf(paste0("C:/Users/CONS_LGA/Dropbox/habilitacja_gatarek_welfe/asset_distribution/graphs_distribution/", symbol, ".pdf"),
    width = 8,
     height = 12)
 
